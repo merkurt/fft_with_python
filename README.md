@@ -8,5 +8,5 @@
 ---
 
 ## amplitude_generator.py
-Here we use fast fourier transform in this example. \
+We use fast fourier transform in this example. \
 ![figure_2](amplitude_spectrum_output.png)
