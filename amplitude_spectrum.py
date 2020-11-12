@@ -1,6 +1,5 @@
 from signal_generator import *
-from scipy import fft
-from numpy import arange
+from numpy import arange, fft
 import matplotlib.pyplot as plt
 
 sampleRate = 1000
@@ -12,13 +11,13 @@ signalFFT = signalFFT[0:int(lengthSignal/2) + 1]
 freq = arange(0, sampleRate / 2, sampleRate / lengthSignal)
 
 plt.subplot(2, 1, 1)
-plt.title('Sinyal')
+plt.title('Signal (cos:100Hz, sin:200Hz)')
 plt.plot(tVector, signal)
-plt.xlabel('Zaman (s)')
+plt.xlabel('Time')
 
 plt.subplot(2, 1, 2)
-plt.title('Genlik Spektrumu')
+plt.title('Amplitude spectrum')
 plt.plot(freq, 2 * abs(signalFFT/ lengthSignal))
-plt.xlabel('Frekans (Hz)')
+plt.xlabel('Frequency (Hz)')
 plt.grid()
 plt.show()
